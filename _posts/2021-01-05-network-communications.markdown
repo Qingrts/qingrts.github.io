@@ -4,7 +4,7 @@ title:  "单工、半双工和全双工方式各有什么不同?"
 date:   2021-01-05 07:38:30
 categories: 网络通信
 tags: network python
-excerpt: 使用wamp任务栏localhost或者phpmyadmin找不应用程序的解决方法
+excerpt: 单工、半双工和全双工方式的不同之处
 mathjax: true
 ---
 
