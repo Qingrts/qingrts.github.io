@@ -21,13 +21,21 @@ yum install crontabs
 
 说明：
 /sbin/service crond start //启动服务
+
 /sbin/service crond stop //关闭服务
+
 /sbin/service crond restart //重启服务
+
 /sbin/service crond reload //重新载入配置
+
 查看crontab服务状态：service crond status
+
 手动启动crontab服务：service crond start
+
 查看crontab服务是否已设置为开机启动，执行命令：ntsysv
+
 加入开机自动启动:
+
 chkconfig crond on
 
 
@@ -39,30 +47,45 @@ chkconfig crond on
 ## 1，crontab命令
 
 功能说明：设置计时器。
+
 语　　法：crontab [-u <用户名称>][配置文件] 或 crontab [-u <用户名称>][-elr]
 
 补充说明：cron是一个常驻服务，它提供计时器的功能，让用户在特定的时间得以执行预设的指令或程序。只要用户会编辑计时器的配置文件，就可以使 用计时器的功能。
 
 其配置文件格式如下：
+
 Minute Hour Day Month DayOFWeek Command
 
 参　　数：
+
 -e 　编辑该用户的计时器设置。
+
 -l 　列出该用户的计时器设置。
+
 -r 　删除该用户的计时器设置。
+
 -u<用户名称> 　指定要设定计时器的用户名称。
 
 ## 2，crontab 格式
 
 基本格式 :
+
 * *　 *　 *　 *　　command
+* 
 分　时　日　月　周　 命令
+
 第1列表示分钟1～59 每分钟用*或者 */1表示
+
 第2列表示小时1～23（0表示0点）
+
 第3列表示日期1～31
+
 第4列 表示月份1～12
+
 第5列标识号星期0～6（0表示星期天）
+
 第6列要运行的命令
+
 ```js
 
 # Use the hash sign to prefix a comment
