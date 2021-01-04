@@ -20,26 +20,15 @@ author: SnakeSon
 yum install crontabs
 
 说明：
-/sbin/service crond start //启动服务
 
-/sbin/service crond stop //关闭服务
-
-/sbin/service crond restart //重启服务
-
-/sbin/service crond reload //重新载入配置
-
-查看crontab服务状态：service crond status
-
-手动启动crontab服务：service crond start
-
-查看crontab服务是否已设置为开机启动，执行命令：ntsysv
-
-加入开机自动启动:
-
-chkconfig crond on
-
-
-
++ /sbin/service crond start   // 启动服务
++ /sbin/service crond stop    // 关闭服务
++ /sbin/service crond restart // 重启服务
++ /sbin/service crond reload  // 重新载入配置
++ service crond status        // 查看crontab服务状态
++ service crond start         // 手动启动crontab服务
++ ntsysv                      // 查看crontab服务是否已设置为开机启动，执行命令
++ chkconfig crond on          // 加入开机自动启动
 
 
 
