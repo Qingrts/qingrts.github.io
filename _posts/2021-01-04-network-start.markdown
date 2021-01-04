@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "hello jekyll!"
+title:  "python network study!"
 date:   2021-01-04 19:03:54
 categories: python
 tags: udp network python socket
