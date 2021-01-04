@@ -204,3 +204,85 @@ s.close()
   1. 创建套接字
   2. 使用套接字收/发数据
   3. 关闭套接字
+
+# udp网络程序-发送、接收数据
+## udp网络程序-发送数据
+创建一个基于udp的网络程序流程很简单，具体步骤如下：
+
+  1. 创建客户端套接字
+  2. 发送/接收数据
+  3. 关闭套接字
+
+代码如下：
+
+```python
+#coding=utf-8
+
+from socket import *
+
+# 1. 创建udp套接字
+udp_socket = socket(AF_INET, SOCK_DGRAM)
+
+# 2. 准备接收方的地址
+# '192.168.1.103'表示目的ip地址
+# 8080表示目的端口
+dest_addr = ('192.168.1.103', 8080)  # 注意 是元组，ip是字符串，端口是数字
+
+# 3. 从键盘获取数据
+send_data = input("请输入要发送的数据:")
+
+# 4. 发送数据到指定的电脑上的指定程序中
+udp_socket.sendto(send_data.encode('utf-8'), dest_addr)
+
+# 5. 关闭套接字
+udp_socket.close()
+```
+运行现象：
+
+在Ubuntu中运行脚本：
+
+![pic](/images/02-就业班-02-2.png)
+
+在windows中运行“网络调试助手”：
+
+![pic](/images/02-就业班-02-3.png)
+
+## udp网络程序-发送、接收数据
+```python
+#coding=utf-8
+
+from socket import *
+
+# 1. 创建udp套接字
+udp_socket = socket(AF_INET, SOCK_DGRAM)
+
+# 2. 准备接收方的地址
+dest_addr = ('192.168.236.129', 8080)
+
+# 3. 从键盘获取数据
+send_data = input("请输入要发送的数据:")
+
+# 4. 发送数据到指定的电脑上
+udp_socket.sendto(send_data.encode('utf-8'), dest_addr)
+
+# 5. 等待接收对方发送的数据
+recv_data = udp_socket.recvfrom(1024)  # 1024表示本次接收的最大字节数
+
+# 6. 显示对方发送的数据
+# 接收到的数据recv_data是一个元组
+# 第1个元素是对方发送的数据
+# 第2个元素是对方的ip和端口
+print(recv_data[0].decode('gbk'))
+print(recv_data[1])
+
+# 7. 关闭套接字
+udp_socket.close()
+```
+
+python脚本：
+
+![pic](/images/02-就业班-02-5.png)
+
+网络调试助手截图：
+
+![pic](/images/02-就业班-02-6.png)
