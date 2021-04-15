@@ -570,7 +570,7 @@ for(var i = 1; i <= 10; i++){
 
 8. 查看所有数据
 ```
-db.test2.find();
+db.test2.find(); 
 ```
 
 9. 条件查询
