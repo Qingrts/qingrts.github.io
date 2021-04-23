@@ -112,3 +112,11 @@ ORDER BY field1 [ASC [DESC][默认 ASC]], [field2...] [ASC [DESC][默认 ASC]]
 + 你可以设定多个字段来排序。
 + 你可以使用 ASC 或 DESC 关键字来设置查询结果是按升序或降序排列。 默认情况下，它是按升序排列。
 + 你可以添加 WHERE...LIKE 子句来设置条件。
+
+19. insert
+  
+|指令|已存在|不存在|举|
+|---|---|---|---|
+|insert|	报错| 	插入| 	insert into names(name, age) values(“小明”, 23);| 
+|insert ignore| 	忽略| 	插入| 	insert ignore into names(name, age) values(“小明”, 24);| 
+|replace|	替换| 	插入| 	replace into names(name, age) values(“小明”, 25);| 
