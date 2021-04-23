@@ -43,6 +43,7 @@ INSERT INTO table_name ( field1, field2,...fieldN )
                        VALUES
                        ( value1, value2,...valueN );
 ```
+
 13. 以下为在MySQL数据库中查询数据通用的 SELECT 语法：
 ```sql
 SELECT column_name,column_name
@@ -56,7 +57,9 @@ FROM table_name
 + 你可以使用 WHERE 语句来包含任何条件。
 + 你可以使用 LIMIT 属性来设定返回的记录数。
 + 你可以通过OFFSET指定SELECT语句开始查询的数据偏移量。默认情况下偏移量为0。
-14. 以下是 SQL SELECT 语句使用 WHERE 子句从数据表中读取数据的通用语法：
+
+
+14.  以下是 SQL SELECT 语句使用 WHERE 子句从数据表中读取数据的通用语法：
 ```sql
 SELECT field1, field2,...fieldN FROM table_name1, table_name2...
 [WHERE condition1 [AND [OR]] condition2.....
@@ -66,7 +69,9 @@ SELECT field1, field2,...fieldN FROM table_name1, table_name2...
 + 你可以使用 AND 或者 OR 指定一个或多个条件。
 + WHERE 子句也可以运用于 SQL 的 DELETE 或者 UPDATE 命令。
 + WHERE 子句类似于程序语言中的 if 条件，根据 MySQL 表中的字段值来读取指定的数据。
-15. 以下是 UPDATE 命令修改 MySQL 数据表数据的通用 SQL 语法：
+
+
+15.  以下是 UPDATE 命令修改 MySQL 数据表数据的通用 SQL 语法：
 ```sql
 UPDATE table_name SET field1=new-value1, field2=new-value2
 [WHERE Clause]
