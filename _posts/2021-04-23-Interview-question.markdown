@@ -40,13 +40,13 @@ HTTP无需认证证书,而https需要认证证书
 
 
 # 深拷贝的方式有哪些，如何实现？
-1. JSON
+## JSON
 
 ```js
 JSON.parse(JSON.strinify());
 ```
 
-2. 递归实现
+## 递归实现
 
 ```js
 function deepCopy(newObj,oldObj) {  //（新数据，被拷贝数据）
@@ -72,7 +72,7 @@ deepCopy(o,a)
 console.log(o)  //深拷贝完成，并且deepCopy(o,a)的值就是o的值
 ```
 
-3. 使用jQuery中的extend
+## 使用jQuery中的extend
 
 ```js
 $.extend(true,obj,obj1)
