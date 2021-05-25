@@ -35,3 +35,63 @@ HTTP无需认证证书,而https需要认证证书
 
 
 # 转发与重定向的区别
+
+
+
+
+# 深拷贝的方式有哪些，如何实现？
+1. JSON
+
+```js
+JSON.parse(JSON.strinify());
+```
+
+2. 递归实现
+
+```js
+function deepCopy(newObj,oldObj) {  //（新数据，被拷贝数据）
+  for(key in oldObj){
+      if(Array.isArray(oldObj[key])){
+          // 如果数据类型是数组，必须写在最上面，
+          // 因为 ( [1,2] instanceof Object === true)
+          newObj[key] = []
+          deepCopy(newObj[key],oldObj[key])
+      }else if(oldObj[key] instanceof Object){
+          //如果数据是对象类型
+          newObj[key] = {}
+          deepCopy(newObj[key],oldObj[key])
+      } else{
+          //数据是基本数据类型
+          newObj[key] = oldObj[key]
+      }
+  }
+  return newObj
+}
+
+deepCopy(o,a)
+console.log(o)  //深拷贝完成，并且deepCopy(o,a)的值就是o的值
+```
+
+3. 使用jQuery中的extend
+
+```js
+$.extend(true,obj,obj1)
+```
+
+
+# 数组去重,字符去重
+```js
+function distinct (arg){
+  if(Array.isArray(arg)) return Array.from(new Set(arg));
+  else if(typeof arg === "string") return Array.from(new Set(arg.split(""))).join("");
+  else if(typeof arg === "number") return Array.from(new Set(arg.toString().split(""))).join("");
+}
+```
+
+# 谈谈对this对象的理解？
+
+1. this总是指向函数的直接调用者（而非间接调用者）；
+   
+2. 如果有new关键字，this指向new出来的那个对象；
+   
+3. 在事件中，this指向触发这个事件的对象，特殊的是，IE中的attachEvent中的this总是指向全局对象
