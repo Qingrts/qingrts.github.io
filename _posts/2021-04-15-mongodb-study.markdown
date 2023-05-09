@@ -2,7 +2,7 @@
 layout: post
 title:  "MongodDB的学习"
 date:   2021-04-14 08:45:50
-categories: IT
+categories: 后端
 tags: 数据库 NoSQL MongoDB
 excerpt: 记录学习MongoDB
 mathjax: true

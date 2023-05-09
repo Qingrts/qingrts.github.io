@@ -2,7 +2,7 @@
 layout: post
 title:  "Web面试题汇总"
 date:   2021-04-23 11:12:50
-categories: IT
+categories: 前端
 tags: Web 面试
 excerpt: 记录自己知道的常见的面试题
 mathjax: true

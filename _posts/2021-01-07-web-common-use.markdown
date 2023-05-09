@@ -2,7 +2,7 @@
 layout: post
 title:  "Web开发常用代码整理"
 date:   2021-01-07 16:34:50
-categories: Web
+categories: 前端
 tags: Web 前端 jquery IE CSS
 excerpt: Web开发常用代码整理
 mathjax: true

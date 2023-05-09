@@ -2,7 +2,7 @@
 layout: post
 title:  "使用wamp任务栏localhost或者phpmyadmin找不应用程序的解决方法"
 date:   2021-01-04 19:03:54
-categories: 应用程序
+categories: 开发者工具
 tags: wamp phpmyadmin
 excerpt: 使用wamp任务栏localhost或者phpmyadmin找不应用程序的解决方法
 mathjax: true

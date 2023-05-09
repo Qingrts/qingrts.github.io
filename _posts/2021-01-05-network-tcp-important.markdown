@@ -2,8 +2,8 @@
 layout: post
 title:  "网络通信-tcp的注意点"
 date:   2021-01-05 19:43:54
-categories: python
-tags: tcp network python socket
+categories: 后端
+tags: 网络通信 tcp
 excerpt: 学习 tcp socket 的学习记录
 mathjax: true
 ---

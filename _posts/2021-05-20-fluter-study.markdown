@@ -2,7 +2,7 @@
 layout: post
 title:  "Flutter的学习"
 date:   2021-05-20 08:36:00
-categories: IT
+categories: 前端
 tags: flutter 跨平台
 excerpt: 记录Flutter的学习
 mathjax: true

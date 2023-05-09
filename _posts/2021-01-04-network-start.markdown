@@ -2,7 +2,7 @@
 layout: post
 title:  "网络通信-udp"
 date:   2021-01-04 19:03:54
-categories: python
+categories: 网络通信
 tags: udp network python socket
 excerpt: 学习 udp socket 的学习记录
 mathjax: true
